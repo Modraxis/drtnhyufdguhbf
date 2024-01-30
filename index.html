@@ -19111,6 +19111,9 @@ tr .fa.fa-trophy {
                 }, t.prototype.drawIcon = function(t, e, i) {
                     var s, l, n, a, o, r, h, u, d, I, c;
                     switch (this.icon) {
+                        case "ab":
+                            this.icon = "https://raw.githubusercontent.com/Modraxis/images/main/AB%20ecp.jpg";
+                            break;
                         case "gamepedia":
                             this.icon = "https://starblast.io/ecp/gamepedia.png";
                             break;
@@ -19134,9 +19137,6 @@ tr .fa.fa-trophy {
                             break;
                         case "csf":
                             this.icon = "https://starblast.io/ecp/csf.png";
-                            break;
-                        case "ab":
-                            this.icon = "https://raw.githubusercontent.com/Modraxis/images/main/AB_Logo_Animation0.png";
                             break;
                         case "pmf":
                             this.icon = "https://starblast.io/ecp/pmf.png";
@@ -19323,11 +19323,11 @@ tr .fa.fa-trophy {
                     }), localStorage.setItem("additional_badges", JSON.stringify(this.additional_badges)), t.options.badge[i] = e
                 }, t.options = {
                     badge: {
+                        ab: "Arab Empire",
                         star: "Star",
                         reddit: "Reddit",
                         pirate: "Pirate",
                         csf: "Centauri Space Force",
-                        ab: "Arab Empire",
                         pmf: "Proxima Mining Front",
                         nwac: "New World Army Citizens",
                         unge: "United Nations Green Eagles",
