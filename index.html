@@ -10818,6 +10818,9 @@ tr .fa.fa-trophy {
                             case "carbon":
                                 this.buildCarbonMaterial();
                                 break;
+                            case "s_ab":
+                                this.buildABMaterial();
+                                break;
                             default:
                                 this.buildDefaultMaterial()
                         }
@@ -10829,7 +10832,8 @@ tr .fa.fa-trophy {
                             emissive: ll10I.hsvToRgbHex(this.hue, .5, 1),
                             emissiveMap: OOlI1
                         })
-                    }, t.prototype.buildX27Material = function() {
+                    },
+                     t.prototype.buildX27Material = function() {
                         return this.material = new THREE.MeshPhongMaterial({
                             map: I0O01,
                             bumpMap: I0O01,
@@ -10841,7 +10845,21 @@ tr .fa.fa-trophy {
                             emissive: ll10I.hsvToRgbHex(this.hue, .5, 1),
                             emissiveMap: OOlI1
                         })
-                    }, t.prototype.buildAlloyMaterial = function() {
+                    },
+                     t.prototype.buildABMaterial = function() {
+                        return this.material = new THREE.MeshPhongMaterial({
+                            map: I0O01,
+                            bumpMap: I0O01,
+                            specularMap: I0O01,
+                            specular: 'hsl(260, 100%, 50%)',
+                            shininess: 100,
+                            bumpScale: .1,
+                            color: 'hsl(180, 100%, 20%)',
+                            emissive: 'hsl(260, 100%, 50%)',
+                            emissiveMap: OOlI1
+                        })
+                    },
+                     t.prototype.buildAlloyMaterial = function() {
                         return this.material = new THREE.MeshPhongMaterial({
                             map: I0O01,
                             bumpMap: I0O01,
@@ -12861,6 +12879,9 @@ tr .fa.fa-trophy {
                             case "carbon":
                                 this.buildCarbonMaterial();
                                 break;
+                            case "s_ab":
+                                this.buildABMaterial();
+                                break;
                             case "copper":
                                 this.buildCopperMaterial();
                                 break;
@@ -12878,7 +12899,8 @@ tr .fa.fa-trophy {
                             emissive: ll10I.hsvToRgbHex(this.hue, .5, 1),
                             emissiveMap: OOlI1
                         })
-                    }, t.prototype.buildAlloyMaterial = function() {
+                    },
+                    t.prototype.buildAlloyMaterial = function() {
                         return this.material = new THREE.MeshPhongMaterial({
                             map: I0O01,
                             bumpMap: I0O01,
@@ -12890,7 +12912,21 @@ tr .fa.fa-trophy {
                             emissive: ll10I.hsvToRgbHex(this.hue, .5, 1),
                             emissiveMap: OOlI1
                         })
-                    }, t.prototype.buildTitaniumMaterial = function() {
+                    },
+                    t.prototype.buildABMaterial = function() {
+                        return this.material = new THREE.MeshPhongMaterial({
+                            map: I0O01,
+                            bumpMap: I0O01,
+                            specularMap: I0O01,
+                            specular: 'hsl(260, 100%, 50%)',
+                            shininess: 100,
+                            bumpScale: .1,
+                            color: 'hsl(180, 100%, 20%)',
+                            emissive: 'hsl(260, 100%, 50%)',
+                            emissiveMap: OOlI1
+                        })
+                    },
+                    t.prototype.buildTitaniumMaterial = function() {
                         return this.material = new THREE.MeshPhongMaterial({
                             map: I0O01,
                             bumpMap: I0O01,
@@ -19248,10 +19284,10 @@ tr .fa.fa-trophy {
                     }).toImage(), t.table[o] = a), t.table[o]
                 }, t.getRandomImage = function(e) {
                     var i, s, l;
-                    return i = ["star", "paw", "pirate", "reddit", "invader", "youtube"][Math.floor(6 * Math.random())], s = ["zinc", "gold", "alloy", "carbon", "titanium"][Math.floor(5 * Math.random())], l = ["0", "1", "2", "3"][Math.floor(4 * Math.random())], t.IlOOI(i, l, s, e)
+                    return i = ["star", "paw", "pirate", "reddit", "invader", "youtube"][Math.floor(6 * Math.random())], s = ["s_ab","zinc", "gold", "alloy", "carbon", "titanium"][Math.floor(5 * Math.random())], l = ["0", "1", "2", "3"][Math.floor(4 * Math.random())], t.IlOOI(i, l, s, e)
                 }, t.test = function() {
                     var e, i, s, l, n, a, o, r, h, u, d, I;
-                    for (u = ["zinc", "gold", "alloy", "carbon", "titanium"], s = 0, a = u.length; s < a; s++)
+                    for (u = ["s_ab","zinc", "gold", "alloy", "carbon", "titanium"], s = 0, a = u.length; s < a; s++)
                         for (e = u[s], d = ["star", "paw", "pirate", "reddit", "invader", "youtube"], l = 0, o = d.length; l < o; l++)
                             for (i = d[l], I = ["simple"], h = 0, r = I.length; h < r; h++) n = I[h], document.body.appendChild(new t(128, {
                                 badge: i,
