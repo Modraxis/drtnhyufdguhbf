@@ -14197,15 +14197,11 @@ tr .fa.fa-trophy {
                     this.I0I1O = e, i.OI101.constructor.call(this, "survival", "Survival Mode"), this.max_enter_time = 1800, this.radar_zoom = 4, this.max_enter_players = 50, this.vocabulary = [{
                         text: " ",
                         icon: " ",
-                        key: "J"
+                        key: "E"
                     }, {
                         text: "Discord",
                         icon: "{",
                         key: "D"
-                    }, {
-                        text: " ",
-                        icon: "\u{1F595}",
-                        key: "E"
                     }, {
                         text: "Hello",
                         icon: "E",
@@ -19252,6 +19248,9 @@ tr .fa.fa-trophy {
                         case "Modraxis":
                             this.icon = "https://raw.githubusercontent.com/Modraxis/images/main/logo.jpg";
                             break;
+                        case "sdc":
+                            this.icon = "https://raw.githubusercontent.com/Modraxis/images/main/sdc.png";
+                            break;
                         case "seasonal":
                             this.icon = "https://starblast.io/ecp/seasonal.png"
                     }
@@ -19350,7 +19349,7 @@ tr .fa.fa-trophy {
                     }).toImage(), t.table[o] = a), t.table[o]
                 }, t.getRandomImage = function(e) {
                     var i, s, l;
-                    return i = ["star", "paw", "pirate", "reddit", "invader", "youtube"][Math.floor(6 * Math.random())], s = ["s_ab1", "s_ab2", "s_ab3", "zinc", "gold", "alloy", "carbon", "titanium"][Math.floor(5 * Math.random())], l = ["0", "1", "2", "3"][Math.floor(4 * Math.random())], t.IlOOI(i, l, s, e)
+                    return i = ["ab","star", "paw", "pirate", "reddit", "invader", "youtube"][Math.floor(6 * Math.random())], s = ["s_ab1", "s_ab2", "s_ab3", "zinc", "gold", "alloy", "carbon", "titanium"][Math.floor(5 * Math.random())], l = ["0", "1", "2", "3"][Math.floor(4 * Math.random())], t.IlOOI(i, l, s, e)
                 }, t.test = function() {
                     var e, i, s, l, n, a, o, r, h, u, d, I;
                     for (u = ["s_ab1", "s_ab2", "s_ab3", "zinc", "gold", "alloy", "carbon", "titanium"], s = 0, a = u.length; s < a; s++)
@@ -19435,6 +19434,7 @@ tr .fa.fa-trophy {
                 }, t.options = {
                     badge: {
                         ab: "Arab Empire",
+                        sdc: "SDC",
                         star: "Star",
                         reddit: "Reddit",
                         pirate: "Pirate",
