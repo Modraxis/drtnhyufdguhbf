@@ -3771,8 +3771,8 @@ tr .fa.fa-trophy {
         sdflogoimg.src = "data:image/svg+xml;base64," + b64;
     </script>
     <script id="donatebox" type="text/x-template">
-        <h2 data-translate="Buy Starblast and become an Elite Commander!"></h2>
-        <ul>
+        <h2 data-translate="Buy Starblast and become an Elite Commander!" style="display: none;"></h2>
+        <ul style="display: none;">
             <li data-translate="Get a standalone application for Windows, MacOS and Linux with advanced interface, Galaxy Map, full gamepad support, ingame ship tree, enhanced graphics."></li>
             <li data-translate="Play on the web version starblast.io without ads."></li>
             <li data-translate="Customize your ship material and laser type."></li>
@@ -3783,8 +3783,8 @@ tr .fa.fa-trophy {
             <li data-translate="Early access to features in beta testing."></li>
             <li data-translate="Show your support to the developers!"></li>
         </ul>
-        <div class="textcentered" style="margin-top:30px;" data-translate="Buying options: All buying options include the standalone app and an ECP code to play on the web."></div>
-        <table class="buy-table download-apps">
+        <div class="textcentered" style="margin-top:30px; display: none;" data-translate="Buying options: All buying options include the standalone app and an ECP code to play on the web."></div>
+        <table class="buy-table download-apps" style="display: none;">
             <tr style="background:rgba(0,0,0,.2)">
                 <td><img height="64" src="https://starblast.data.neuronality.com/img/paypal-square.png"></td>
                 <td>
@@ -3813,7 +3813,7 @@ tr .fa.fa-trophy {
                 </td>
             </tr>
         </table>
-        <form id="paypal_submission" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <form id="paypal_submission" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="display: none;">
             <input type="hidden" name="charset" value="UTF-8" />
             <input type="hidden" name="cmd" value="_xclick" />
             <input type="hidden" name="business" value="admin@neuronball.com" />
@@ -3829,12 +3829,11 @@ tr .fa.fa-trophy {
             <input type="hidden" name="notify_url" value="https://neuronality.com/starblastio/paypalcallback/" />
         </form>
         <hr />
-        <h2 data-translate="Enter my key"></h2>
-        <p data-translate="Your already own your ECP? Thank you for your purchase! Please enter your ECP key below:"></p>
+        <h2 data-translate="Enter Your Key"></h2>
         <form id="licenceKeyForm">
             <input id="licenceKey" data-translate-placeholder="Enter your key here"><button id="licenceKeyBtn">OK</button>
         </form>
-        <p data-translate="For any problem with your ECP key, please e-mail us at contact@neuronality.com, we will help as soon as we can!"></p>
+        <p style="display: none;" data-translate="For any problem with your ECP key, please e-mail us at contact@neuronality.com, we will help as soon as we can!"></p>
     </script>
     <script id="gameinfos" type="text/x-template">
         <div id='infologo'></div>
@@ -19384,7 +19383,7 @@ tr .fa.fa-trophy {
                 }, t.prototype.I0Ol1 = function(t) {
                     return /([0-9a-f]{5})-([0-9a-f]{5})/.test(t)
                 }, t.prototype.OO000 = function(t) {
-                    return this.verified = "yes", localStorage.setItem("ECPVerified", this.verified)
+                    return this.verified = t, localStorage.setItem("ECPVerified", this.verified)
                 }, t.prototype.removeKey = function() {
                     return localStorage.removeItem("ECPKey"), localStorage.removeItem("ECPVerified"), this.I0I1O.II10I.reloadGame()
                 }, t.prototype.I1II1 = function() {
