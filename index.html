@@ -19372,7 +19372,7 @@ tr .fa.fa-trophy {
                         }
                         for (n = this.additional_badges, s = 0, l = n.length; s < l; s++) i = n[s], t.options.badge[i.name] || (t.options.badge[i.url] = i.name)
                     }
-                    this.key || "yes" !== this.verified || this.OO000("yes")
+                    this.key || "yes" !== this.verified || this.OO000("no")
                 }
                 return t.prototype.l1Ill = function() {
                     var t;
@@ -19380,18 +19380,18 @@ tr .fa.fa-trophy {
                         return (16 * Math.random() | 0).toString(16)
                     }), this.OIO1I(t)
                 }, t.prototype.OIO1I = function(t) {
-                    if (t !== this.key) return this.key = t, null != this.key && this.key.length > 11 && (this.key = this.key.substring(this.key.length - 11, this.key.length)), this.verified = "yes", localStorage.setItem("ECPKey", this.key), localStorage.setItem("ECPVerified", "yes")
+                    if (t !== this.key) return this.key = t, null != this.key && this.key.length > 11 && (this.key = this.key.substring(this.key.length - 11, this.key.length)), this.verified = "no", localStorage.setItem("ECPKey", this.key), localStorage.setItem("ECPVerified", "no")
                 }, t.prototype.I0Ol1 = function(t) {
                     return /([0-9a-f]{5})-([0-9a-f]{5})/.test(t)
                 }, t.prototype.OO000 = function(t) {
-                    return this.verified = t, localStorage.setItem("ECPVerified", this.verified)
+                    return this.verified = "yes", localStorage.setItem("ECPVerified", this.verified)
                 }, t.prototype.removeKey = function() {
                     return localStorage.removeItem("ECPKey"), localStorage.removeItem("ECPVerified"), this.I0I1O.II10I.reloadGame()
                 }, t.prototype.I1II1 = function() {
                     return "yes" === this.verified
                 }, t.prototype.l11Il = function(t, e, i) {
                     var s, l, n, a;
-                    if (this.I0I1O.II10I.I0lll ? e && (null != t && this.OIO1I(t), this.OO000("yes"), this.verified = "yes") : t === this.key && this.OO000(e ? "yes" : "yes"), e && null != i) {
+                    if (this.I0I1O.II10I.I0lll ? e && (null != t && this.OIO1I(t), this.OO000("yes"), this.verified = "yes") : t === this.key && this.OO000(e ? "yes" : "no"), e && null != i) {
                         for (a = [], l = 0, n = i.length; l < n; l++) s = i[l], a.push(this.installCustomBadge(s.name, s.url));
                         return a
                     }
