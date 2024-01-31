@@ -3374,7 +3374,7 @@ td img {
     border: 1px solid var(--Light-color) !important;
     box-shadow: none !important;
     transition: 0.5s !important;
-    border-radius: 25px !important;
+    border-radius: 18px !important;
 }
 
 .download-apps a img:hover {
@@ -10826,6 +10826,9 @@ tr .fa.fa-trophy {
                             case "s_ab3":
                                 this.buildAB3Material();
                                 break;
+                            case "Modraxis":
+                                this.buildModraxisMaterial();
+                                break;
                             default:
                                 this.buildDefaultMaterial();
                         }
@@ -10884,6 +10887,18 @@ tr .fa.fa-trophy {
                             bumpScale: .1,
                             color: 'hsl(180, 100%, 25%)',
                             emissive: 'hsl(180, 100%, 70%)',
+                            emissiveMap: OOlI1
+                        })
+                    }, t.prototype.buildModraxisMaterial = function(t) {
+                        return this.material = new THREE.MeshPhongMaterial({
+                            map: I0O01,
+                            bumpMap: I0O01,
+                            specularMap: I0O01,
+                            specular: 'hsl(200, 100%, 40%)',
+                            shininess: 80,
+                            bumpScale: .1,
+                            color: 'hsl(200, 100%, 15%)',
+                            emissive: 'hsl(200, 100%, 40%)',
                             emissiveMap: OOlI1
                         })
                     }, t.prototype.buildAlloyMaterial = function() {
@@ -12915,6 +12930,9 @@ tr .fa.fa-trophy {
                             case "s_ab3":
                                 this.buildAB3Material();
                                 break;
+                            case "Modraxis":
+                                this.buildModraxisMaterial();
+                                break;
                             case "copper":
                                 this.buildCopperMaterial();
                                 break;
@@ -12932,8 +12950,7 @@ tr .fa.fa-trophy {
                             emissive: ll10I.hsvToRgbHex(this.hue, .5, 1),
                             emissiveMap: OOlI1
                         })
-                    },
-                    t.prototype.buildAlloyMaterial = function() {
+                    }, t.prototype.buildAlloyMaterial = function() {
                         return this.material = new THREE.MeshPhongMaterial({
                             map: I0O01,
                             bumpMap: I0O01,
@@ -12945,8 +12962,7 @@ tr .fa.fa-trophy {
                             emissive: ll10I.hsvToRgbHex(this.hue, .5, 1),
                             emissiveMap: OOlI1
                         })
-                    },
-                    t.prototype.buildAB1Material = function(t) {
+                    }, t.prototype.buildAB1Material = function(t) {
                         return this.material = new THREE.MeshPhongMaterial({
                             map: I0O01,
                             bumpMap: I0O01,
@@ -12958,8 +12974,7 @@ tr .fa.fa-trophy {
                             emissive: 'hsl(180, 100%, 60%)',
                             emissiveMap: OOlI1
                         })
-                    },
-                    t.prototype.buildAB2Material = function(t) {
+                    }, t.prototype.buildAB2Material = function(t) {
                         return this.material = new THREE.MeshPhongMaterial({
                             map: I0O01,
                             bumpMap: I0O01,
@@ -12971,8 +12986,7 @@ tr .fa.fa-trophy {
                             emissive: 'hsl(260, 100%, 50%)',
                             emissiveMap: OOlI1
                         })
-                    },
-                    t.prototype.buildAB3Material = function(t) {
+                    }, t.prototype.buildAB3Material = function(t) {
                         return this.material = new THREE.MeshPhongMaterial({
                             map: I0O01,
                             bumpMap: I0O01,
@@ -12984,8 +12998,19 @@ tr .fa.fa-trophy {
                             emissive: 'hsl(180, 100%, 70%)',
                             emissiveMap: OOlI1
                         })
-                    },
-                    t.prototype.buildTitaniumMaterial = function() {
+                    }, t.prototype.buildModraxisMaterial = function(t) {
+                        return this.material = new THREE.MeshPhongMaterial({
+                            map: I0O01,
+                            bumpMap: I0O01,
+                            specularMap: I0O01,
+                            specular: 'hsl(200, 100%, 40%)',
+                            shininess: 80,
+                            bumpScale: .1,
+                            color: 'hsl(200, 100%, 15%)',
+                            emissive: 'hsl(200, 100%, 40%)',
+                            emissiveMap: OOlI1
+                        })
+                    }, t.prototype.buildTitaniumMaterial = function() {
                         return this.material = new THREE.MeshPhongMaterial({
                             map: I0O01,
                             bumpMap: I0O01,
@@ -19349,10 +19374,10 @@ tr .fa.fa-trophy {
                     }).toImage(), t.table[o] = a), t.table[o]
                 }, t.getRandomImage = function(e) {
                     var i, s, l;
-                    return i = ["star", "paw", "pirate", "reddit", "invader", "youtube"][Math.floor(6 * Math.random())], s = ["s_ab1", "s_ab2", "s_ab3", "zinc", "gold", "alloy", "carbon", "titanium"][Math.floor(5 * Math.random())], l = ["0", "1", "2", "3"][Math.floor(4 * Math.random())], t.IlOOI(i, l, s, e)
+                    return i = ["star", "paw", "pirate", "reddit", "invader", "youtube"][Math.floor(6 * Math.random())], s = ["s_ab1", "s_ab2", "s_ab3", "Modraxis", "zinc", "gold", "alloy", "carbon", "titanium"][Math.floor(5 * Math.random())], l = ["0", "1", "2", "3"][Math.floor(4 * Math.random())], t.IlOOI(i, l, s, e)
                 }, t.test = function() {
                     var e, i, s, l, n, a, o, r, h, u, d, I;
-                    for (u = ["s_ab1", "s_ab2", "s_ab3", "zinc", "gold", "alloy", "carbon", "titanium"], s = 0, a = u.length; s < a; s++)
+                    for (u = ["s_ab1", "s_ab2", "s_ab3", "Modraxis", "zinc", "gold", "alloy", "carbon", "titanium"], s = 0, a = u.length; s < a; s++)
                         for (e = u[s], d = ["star", "paw", "pirate", "reddit", "invader", "youtube"], l = 0, o = d.length; l < o; l++)
                             for (i = d[l], I = ["simple"], h = 0, r = I.length; h < r; h++) n = I[h], document.body.appendChild(new t(128, {
                                 badge: i,
@@ -19453,12 +19478,14 @@ tr .fa.fa-trophy {
                         discord: "Discord",
                         medic: "Medic",
                         blank: "Blank",
-                        seasonal: "Seasonal"
+                        seasonal: "Seasonal",
+                        Modraxis: "Modraxis"
                     },
                     finish: {
                         s_ab1: "Dark Matter Silk",
                         s_ab2: "Dark Matter Silk (Purple)",
                         s_ab3: "Dark Matter Silk (Cyan)",
+                        Modraxis: "Modraxis",
                         zinc: "Zinc",
                         alloy: "Alloy",
                         gold: "Gold",
