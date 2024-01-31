@@ -10818,11 +10818,17 @@ tr .fa.fa-trophy {
                             case "carbon":
                                 this.buildCarbonMaterial();
                                 break;
-                            case "s_ab":
-                                this.buildABMaterial();
+                            case "s_ab1":
+                                this.buildAB1Material();
+                                break;
+                            case "s_ab2":
+                                this.buildAB2Material();
+                                break;
+                            case "s_ab3":
+                                this.buildAB3Material();
                                 break;
                             default:
-                                this.buildDefaultMaterial()
+                                this.buildDefaultMaterial();
                         }
                         return this.base_color = this.material.color.getHex(), s = this.base_color >> 16 & 255, i = this.base_color >> 8 & 255, e = 255 & this.base_color, this.dark_color = Math.floor(s / 2) << 16 | Math.floor(i / 2) << 8 | Math.floor(e / 2), this.material
                     }, t.prototype.buildDefaultMaterial = function(t) {
@@ -10845,8 +10851,19 @@ tr .fa.fa-trophy {
                             emissive: ll10I.hsvToRgbHex(this.hue, .5, 1),
                             emissiveMap: OOlI1
                         })
-                    },
-                     t.prototype.buildABMaterial = function() {
+                    }, t.prototype.buildAB1Material = function(t) {
+                        return this.material = new THREE.MeshPhongMaterial({
+                            map: I0O01,
+                            bumpMap: I0O01,
+                            specularMap: I0O01,
+                            specular: 'hsl(180, 100%, 40%)',
+                            shininess: 100,
+                            bumpScale: .1,
+                            color: 'hsl(260, 100%, 60%)',
+                            emissive: 'hsl(180, 100%, 60%)',
+                            emissiveMap: OOlI1
+                        })
+                    }, t.prototype.buildAB2Material = function(t) {
                         return this.material = new THREE.MeshPhongMaterial({
                             map: I0O01,
                             bumpMap: I0O01,
@@ -10854,12 +10871,23 @@ tr .fa.fa-trophy {
                             specular: 'hsl(260, 100%, 50%)',
                             shininess: 100,
                             bumpScale: .1,
-                            color: 'hsl(180, 100%, 35%)',
+                            color: 'hsl(260, 100%, 50%)',
                             emissive: 'hsl(260, 100%, 50%)',
                             emissiveMap: OOlI1
                         })
-                    },
-                     t.prototype.buildAlloyMaterial = function() {
+                    }, t.prototype.buildAB3Material = function(t) {
+                        return this.material = new THREE.MeshPhongMaterial({
+                            map: I0O01,
+                            bumpMap: I0O01,
+                            specularMap: I0O01,
+                            specular: 'hsl(180, 100%, 45%)',
+                            shininess: 100,
+                            bumpScale: .1,
+                            color: 'hsl(180, 100%, 25%)',
+                            emissive: 'hsl(180, 100%, 70%)',
+                            emissiveMap: OOlI1
+                        })
+                    }, t.prototype.buildAlloyMaterial = function() {
                         return this.material = new THREE.MeshPhongMaterial({
                             map: I0O01,
                             bumpMap: I0O01,
@@ -12879,8 +12907,14 @@ tr .fa.fa-trophy {
                             case "carbon":
                                 this.buildCarbonMaterial();
                                 break;
-                            case "s_ab":
-                                this.buildABMaterial();
+                            case "s_ab1":
+                                this.buildAB1Material();
+                                break;
+                            case "s_ab2":
+                                this.buildAB2Material();
+                                break;
+                            case "s_ab3":
+                                this.buildAB3Material();
                                 break;
                             case "copper":
                                 this.buildCopperMaterial();
@@ -12889,7 +12923,7 @@ tr .fa.fa-trophy {
                                 this.buildDiamondMaterial();
                                 break;
                             default:
-                                this.buildDefaultMaterial()
+                                this.buildDefaultMaterial();
                         }
                         return this.base_color = this.material.color.getHex(), s = this.base_color >> 16 & 255, i = this.base_color >> 8 & 255, e = 255 & this.base_color, this.dark_color = Math.floor(s / 2) << 16 | Math.floor(i / 2) << 8 | Math.floor(e / 2), this.material
                     }, t.prototype.buildDefaultMaterial = function(t) {
@@ -12913,7 +12947,20 @@ tr .fa.fa-trophy {
                             emissiveMap: OOlI1
                         })
                     },
-                    t.prototype.buildABMaterial = function(t) {
+                    t.prototype.buildAB1Material = function(t) {
+                        return this.material = new THREE.MeshPhongMaterial({
+                            map: I0O01,
+                            bumpMap: I0O01,
+                            specularMap: I0O01,
+                            specular: 'hsl(180, 100%, 40%)',
+                            shininess: 100,
+                            bumpScale: .1,
+                            color: 'hsl(260, 100%, 60%)',
+                            emissive: 'hsl(180, 100%, 60%)',
+                            emissiveMap: OOlI1
+                        })
+                    },
+                    t.prototype.buildAB2Material = function(t) {
                         return this.material = new THREE.MeshPhongMaterial({
                             map: I0O01,
                             bumpMap: I0O01,
@@ -12921,8 +12968,21 @@ tr .fa.fa-trophy {
                             specular: 'hsl(260, 100%, 50%)',
                             shininess: 100,
                             bumpScale: .1,
-                            color: 'hsl(180, 100%, 35%)',
+                            color: 'hsl(260, 100%, 50%)',
                             emissive: 'hsl(260, 100%, 50%)',
+                            emissiveMap: OOlI1
+                        })
+                    },
+                    t.prototype.buildAB3Material = function(t) {
+                        return this.material = new THREE.MeshPhongMaterial({
+                            map: I0O01,
+                            bumpMap: I0O01,
+                            specularMap: I0O01,
+                            specular: 'hsl(180, 100%, 45%)',
+                            shininess: 100,
+                            bumpScale: .1,
+                            color: 'hsl(180, 100%, 25%)',
+                            emissive: 'hsl(180, 100%, 70%)',
                             emissiveMap: OOlI1
                         })
                     },
@@ -19121,8 +19181,14 @@ tr .fa.fa-trophy {
                         case "gold":
                             s = t.createLinearGradient(0, 0, 0, i), s.addColorStop(0, "hsl(40,100%,50%)"), s.addColorStop(.5, "hsl(40,100%,80%)"), s.addColorStop(.5, "hsl(20,100%,30%)"), s.addColorStop(1, "hsl(40,100%,50%)");
                             break;
-                        case "s_ab":
+                        case "s_ab1":
                             s = t.createLinearGradient(0, 0, 0, i), s.addColorStop(0, "hsl(180,100%,50%)"), s.addColorStop(.5, "hsl(260,100%,80%)"), s.addColorStop(.5, "hsl(260,100%,30%)"), s.addColorStop(1, "hsl(260,100%,50%)");
+                            break;
+                        case "s_ab2":
+                            s = t.createLinearGradient(0, 0, 0, i), s.addColorStop(0, "hsl(260,100%,50%)"), s.addColorStop(.5, "hsl(260,100%,80%)"), s.addColorStop(.5, "hsl(260,100%,30%)"), s.addColorStop(1, "hsl(260,100%,50%)");
+                            break;
+                        case "s_ab3":
+                            s = t.createLinearGradient(0, 0, 0, i), s.addColorStop(0, "hsl(180,100%,50%)"), s.addColorStop(.5, "hsl(180,100%,50%)"), s.addColorStop(.5, "hsl(180,100%,30%)"), s.addColorStop(1, "hsl(180,100%,50%)");
                             break;
                         case "Modraxis":
                             s = t.createLinearGradient(0, 0, 0, i), s.addColorStop(0, "hsl(200,100%,50%)"), s.addColorStop(.5, "hsl(200,100%,80%)"), s.addColorStop(.5, "hsl(200,100%,20%)"), s.addColorStop(1, "hsl(200,100%,50%)");
@@ -19132,7 +19198,7 @@ tr .fa.fa-trophy {
                             for (l = t.createLinearGradient(0, 0, 0, i), l.addColorStop(0, "#333"), l.addColorStop(.1, "#888"), n = o = 0, d = h - 1; o <= d; n = o += 1) l.addColorStop((n + .5) / h, "#000"), l.addColorStop(Math.min(1, (n + 1.5) / h), "#888");
                             break;
                         default:
-                            s = t.createLinearGradient(0, 0, 0, i), s.addColorStop(0, "#EEE"), s.addColorStop(1, "#666")
+                            s = t.createLinearGradient(0, 0, 0, i), s.addColorStop(0, "#EEE"), s.addColorStop(1, "#666");
                     }
                     if (t.globalCompositeOperation = "source-atop", t.fillStyle = s, "carbon" === this.finish) {
                         for (n = r = 0, I = 4 * h - 1; r <= I; n = r += 1) t.fillStyle = n % 2 == 0 ? s : l, t.fillRect(n * e / (4 * h), 0, e / (4 * h), i);
@@ -19284,10 +19350,10 @@ tr .fa.fa-trophy {
                     }).toImage(), t.table[o] = a), t.table[o]
                 }, t.getRandomImage = function(e) {
                     var i, s, l;
-                    return i = ["star", "paw", "pirate", "reddit", "invader", "youtube"][Math.floor(6 * Math.random())], s = ["s_ab","zinc", "gold", "alloy", "carbon", "titanium"][Math.floor(5 * Math.random())], l = ["0", "1", "2", "3"][Math.floor(4 * Math.random())], t.IlOOI(i, l, s, e)
+                    return i = ["star", "paw", "pirate", "reddit", "invader", "youtube"][Math.floor(6 * Math.random())], s = ["s_ab1", "s_ab2", "s_ab3", "zinc", "gold", "alloy", "carbon", "titanium"][Math.floor(5 * Math.random())], l = ["0", "1", "2", "3"][Math.floor(4 * Math.random())], t.IlOOI(i, l, s, e)
                 }, t.test = function() {
                     var e, i, s, l, n, a, o, r, h, u, d, I;
-                    for (u = ["s_ab","zinc", "gold", "alloy", "carbon", "titanium"], s = 0, a = u.length; s < a; s++)
+                    for (u = ["s_ab1", "s_ab2", "s_ab3", "zinc", "gold", "alloy", "carbon", "titanium"], s = 0, a = u.length; s < a; s++)
                         for (e = u[s], d = ["star", "paw", "pirate", "reddit", "invader", "youtube"], l = 0, o = d.length; l < o; l++)
                             for (i = d[l], I = ["simple"], h = 0, r = I.length; h < r; h++) n = I[h], document.body.appendChild(new t(128, {
                                 badge: i,
@@ -19300,7 +19366,7 @@ tr .fa.fa-trophy {
                     var i, s, l, n;
                     if (this.I0I1O = e, this.key = localStorage.getItem("ECPKey"), null != this.key && this.key.length > 11 && (this.key = this.key.substring(this.key.length - 11, this.key.length)), this.verified = localStorage.getItem("ECPVerified"), this.custom = {
                             badge: localStorage.getItem("badge") || "ab",
-                            finish: localStorage.getItem("finish") || "s_ab",
+                            finish: localStorage.getItem("finish") || "s_ab1",
                             laser: localStorage.getItem("laser") || "1"
                         }, "halloween" === this.custom.badge && (this.custom.badge = "seasonal", localStorage.setItem("badge", "seasonal")), "fullcolor" === this.custom.finish && (this.custom.finish = "alloy"), this.additional_badges = [], null != localStorage.getItem("additional_badges")) {
                         try {
@@ -19391,7 +19457,9 @@ tr .fa.fa-trophy {
                         seasonal: "Seasonal"
                     },
                     finish: {
-                        s_ab: "Dark Matter Silk",
+                        s_ab1: "Dark Matter Silk",
+                        s_ab2: "Dark Matter Silk (Purple)",
+                        s_ab3: "Dark Matter Silk (Cyan)",
                         zinc: "Zinc",
                         alloy: "Alloy",
                         gold: "Gold",
