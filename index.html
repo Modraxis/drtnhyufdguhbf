@@ -10555,9 +10555,9 @@
                     var c1 = document.querySelectorAll('#c1');
                     var c2 = document.querySelectorAll('#c2');
                     this.material = new THREE.MeshPhongMaterial({
-                        color: `hsl(${c1}, 100%, 50%)`,
+                        color: `hsl(${c1.value}, 100%, 50%)`,
                         opacity: .7,
-                        specular: `hsl(${c2}, 100%, 50%)`,
+                        specular: `hsl(${c2.value}, 100%, 50%)`,
                         shininess: 40,
                         transparent: !0,
                         side: THREE.DoubleSide,
@@ -19165,22 +19165,22 @@
                             filter: "default,app,mobile"
                         },
                         c1: {
-                            name: "Crystal Color 2",
-                            value: 200,
-                            skipauto: !0,
-                            type: "range",
-                            min: 0,
-                            max: 360,
-                            l10O1: 0.1,
-                            filter: "default,app,mobile"
-                        },
-                        c2: {
                             name: "Crystal Color 1",
                             value: 200,
                             skipauto: !0,
                             type: "range",
                             min: 0,
-                            max: 360,
+                            max: 4.55,
+                            l10O1: 0.1,
+                            filter: "default,app,mobile"
+                        },
+                        c2: {
+                            name: "Crystal Color 2",
+                            value: 200,
+                            skipauto: !0,
+                            type: "range",
+                            min: 0,
+                            max: 4.55,
                             l10O1: 0.1,
                             filter: "default,app,mobile"
                         },
