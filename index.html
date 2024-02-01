@@ -5274,7 +5274,7 @@
                         blending: THREE.AdditiveBlending
                     }), this.data = {
                         name: ""
-                    }, this.lOO1O = new THREE.Mesh(this.l00l1, this.material), this.lOO1O.scale.set(1, .125, 1), this.lOO1O.position.y = -.5875, this.fps = 60, this.players = 0, this.l0O0O = 0, this.ping = 0, this.refresh_time = 0
+                    }, this.lOO1O = new THREE.Mesh(this.l00l1, this.material), this.lOO1O.scale.set(1, .125, 1), this.lOO1O.position.y = -.5875, this.fps = 360, this.players = 0, this.l0O0O = 0, this.ping = 0, this.refresh_time = 0
                 }
                 return t.prototype.setHue = function (t) {
                     if (t !== this.hue) return this.hue = t, this.repaint()
@@ -5873,7 +5873,7 @@
                 return extend(i, e), i.prototype.gamepadChat = function (t, e) {
                     var i, s, l, n, a, o, r, h, u, d, I, c, p, O, m, f;
                     if (t) {
-                        if (this.close_time = Date.now() + 500, !this.shown) {
+                        if (this.close_time = Date.now() + 6e3, !this.shown) {
                             for (this.I11lI = this.IOI0O = [.25, .1, .5, .8], n = .2, this.I0I1O.is_mobile_app && (this.I11lI = this.IOI0O = [.25, .05, .5, .9], n = .125), O = this.buttons, r = h = 0, I = O.length; h < I; r = ++h) s = O[r], i = 180 * THREE.Math.DEG2RAD * 2 * r / this.buttons.length, s.IOI0O = s.I11lI = [.5 + .4 * Math.cos(i) - n / 2, .5 - .4 * Math.sin(i) - n / 2, n, n], s.OIIOl.init({
                                 OIlIO: .1,
                                 l0111: .1,
