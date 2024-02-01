@@ -5852,7 +5852,7 @@
             }, hasProp = {}.hasOwnProperty, this.ChatPanel = function (e) {
                 function i(e) {
                     var s, l, n, a, o, r, h, u, d, I, c;
-                    if (this.I0I1O = e, i.OI101.constructor.call(this), this.buttons = [5], this.open_button = new OpenChatButton(this.I0I1O, t("TALK"), "", "C", function (t) {
+                    if (this.I0I1O = e, i.OI101.constructor.call(this), this.buttons = [], this.open_button = new OpenChatButton(this.I0I1O, t("TALK"), "", "C", function (t) {
                         return function () {
                             return t.toggleChat()
                         }
@@ -5873,7 +5873,7 @@
                 return extend(i, e), i.prototype.gamepadChat = function (t, e) {
                     var i, s, l, n, a, o, r, h, u, d, I, c, p, O, m, f;
                     if (t) {
-                        if (this.close_time = Date.now() + 6e3, !this.shown) {
+                        if (this.close_time = Date.now() + 500, !this.shown) {
                             for (this.I11lI = this.IOI0O = [.25, .1, .5, .8], n = .2, this.I0I1O.is_mobile_app && (this.I11lI = this.IOI0O = [.25, .05, .5, .9], n = .125), O = this.buttons, r = h = 0, I = O.length; h < I; r = ++h) s = O[r], i = 180 * THREE.Math.DEG2RAD * 2 * r / this.buttons.length, s.IOI0O = s.I11lI = [.5 + .4 * Math.cos(i) - n / 2, .5 - .4 * Math.sin(i) - n / 2, n, n], s.OIIOl.init({
                                 OIlIO: .1,
                                 l0111: .1,
