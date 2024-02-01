@@ -3888,7 +3888,7 @@
         </form>
         <hr />
         <h2 data-translate="Enter Your Key"></h2>
-        <form id="licenceKeyForm">
+        <form id="licenceKeyForm" style="margin-top: 25px;">
             <input id="licenceKey" data-translate-placeholder="Enter your key here"><button id="licenceKeyBtn">OK</button>
         </form>
         <p style="display: none;" data-translate="For any problem with your ECP key, please e-mail us at contact@neuronality.com, we will help as soon as we can!"></p>
@@ -14937,7 +14937,7 @@
                 return i.prototype = e.prototype, t.prototype = new i, t.OI101 = e.prototype, t
             }, hasProp = {}.hasOwnProperty, this.DeathMatchMode = function (e) {
                 function i(e, s, l) {
-                    this.I0I1O = e, null == s && (s = "deathmatch"), null == l && (l = "Deathmatch"), i.OI101.constructor.call(this, s, l), this.vocabulary = [{ text: " " ,icon: " ", key: "E"}], this.radar_zoom = 1, this.max_enter_time = 3600, this.max_enter_players = 10, this.soundtrack = "argon.mp3", this.respawn_delay = 1e3, this.III0I = !1, this.pro = !1, this.anonymous_ships = !0, this.radar_shows_leader = !1, this.show_weaponsbar = !1, this.tips_test = "Kill any ship for %d point", this.tips = [t("Kill any ship for %d point").replace("%d", 1), t("Kill your target for %d points").replace("%d", 2), t("Score %d points to win the round").replace("%d", 12)]
+                    this.I0I1O = e, null == s && (s = "deathmatch"), null == l && (l = "Deathmatch"), i.OI101.constructor.call(this, s, l), this.vocabulary = [], this.radar_zoom = 1, this.max_enter_time = 3600, this.max_enter_players = 10, this.soundtrack = "argon.mp3", this.respawn_delay = 1e3, this.III0I = !1, this.pro = !1, this.anonymous_ships = !0, this.radar_shows_leader = !1, this.show_weaponsbar = !1, this.tips_test = "Kill any ship for %d point", this.tips = [t("Kill any ship for %d point").replace("%d", 1), t("Kill your target for %d points").replace("%d", 2), t("Score %d points to win the round").replace("%d", 12)]
                 }
                 return extend(i, e), i.prototype.IlI0I = function (t) {
                     return this.game_info = t, this.I0I1O.startGame(t), this.I0I1O.display.screen.llO1l.hide(), this.I0I1O.O1Ill.OllIO.IOIlO.x = 0, this.I0I1O.O1Ill.OllIO.IOIlO.y = -40, this.next_round_page = new NextRoundPage(this.I0I1O, this), this.next_round_page.visible = !1, this.I0I1O.display.screen.llO1l.add(this.next_round_page, [0, 0, 1, 1]), this.I0I1O.lI1OO.enter()
@@ -19161,6 +19161,16 @@
                             max: 2,
                             l10O1: .02,
                             filter: "default,app,mobile"
+                        },
+                        emotes: {
+                            name: "Chat Emotes Capacity",
+                            value: 4,
+                            skipauto: !0,
+                            type: "range",
+                            min: 1,
+                            max: 4,
+                            l10O1: 1,
+                            filter: "default,app"
                         },
                         language: {
                             name: "Language",
