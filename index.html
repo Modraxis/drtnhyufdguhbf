@@ -14937,7 +14937,7 @@
                 return i.prototype = e.prototype, t.prototype = new i, t.OI101 = e.prototype, t
             }, hasProp = {}.hasOwnProperty, this.DeathMatchMode = function (e) {
                 function i(e, s, l) {
-                    this.I0I1O = e, null == s && (s = "deathmatch"), null == l && (l = "Deathmatch"), i.OI101.constructor.call(this, s, l), this.vocabulary = [], this.radar_zoom = 1, this.max_enter_time = 3600, this.max_enter_players = 10, this.soundtrack = "argon.mp3", this.respawn_delay = 1e3, this.III0I = !1, this.pro = !1, this.anonymous_ships = !0, this.radar_shows_leader = !1, this.show_weaponsbar = !1, this.tips_test = "Kill any ship for %d point", this.tips = [t("Kill any ship for %d point").replace("%d", 1), t("Kill your target for %d points").replace("%d", 2), t("Score %d points to win the round").replace("%d", 12)]
+                    this.I0I1O = e, null == s && (s = "deathmatch"), null == l && (l = "Deathmatch"), i.OI101.constructor.call(this, s, l), this.vocabulary = [{ text: " " ,icon: " ", key: "E"}], this.radar_zoom = 1, this.max_enter_time = 3600, this.max_enter_players = 10, this.soundtrack = "argon.mp3", this.respawn_delay = 1e3, this.III0I = !1, this.pro = !1, this.anonymous_ships = !0, this.radar_shows_leader = !1, this.show_weaponsbar = !1, this.tips_test = "Kill any ship for %d point", this.tips = [t("Kill any ship for %d point").replace("%d", 1), t("Kill your target for %d points").replace("%d", 2), t("Score %d points to win the round").replace("%d", 12)]
                 }
                 return extend(i, e), i.prototype.IlI0I = function (t) {
                     return this.game_info = t, this.I0I1O.startGame(t), this.I0I1O.display.screen.llO1l.hide(), this.I0I1O.O1Ill.OllIO.IOIlO.x = 0, this.I0I1O.O1Ill.OllIO.IOIlO.y = -40, this.next_round_page = new NextRoundPage(this.I0I1O, this), this.next_round_page.visible = !1, this.I0I1O.display.screen.llO1l.add(this.next_round_page, [0, 0, 1, 1]), this.I0I1O.lI1OO.enter()
@@ -16674,7 +16674,7 @@
                 return i.prototype = e.prototype, t.prototype = new i, t.OI101 = e.prototype, t
             }, hasProp = {}.hasOwnProperty, this.ModdingMode = function (t) {
                 function e(t) {
-                    this.I0I1O = t, e.OI101.constructor.call(this, "modding", "Modding"), this.vocabulary = [{ text: " " ,icon: " ", key: "."}], this.radar_shows_leader = !1
+                    this.I0I1O = t, e.OI101.constructor.call(this, "modding", "Modding"), this.vocabulary = [], this.radar_shows_leader = !1
                 }
                 return extend(e, t), e.prototype.setOptions = function (t) {
                     if (e.OI101.setOptions.call(this, t), t.radar_zoom && (this.radar_zoom = t.radar_zoom), null != t.weapons_store && (this.restricted_weapons_store = !t.weapons_store), null != t.vocabulary) return this.vocabulary = t.vocabulary
