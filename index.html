@@ -10552,13 +10552,11 @@
                 function t(t) {
                     var e, i;
                     for (this.I0I1O = t, this.II0II = new THREE.Group, this.II0II.position.set(0, 0, -1), this.crystals_by_id = [], this.OllO0 = [], this.models = [], e = i = 1; i <= 10; e = i += 1) this.models.push(this.createModel(e));
-                    var c1 = document.querySelectorAll('#c1');
-                    var c2 = document.querySelectorAll('#c2');
                     this.material = new THREE.MeshPhongMaterial({
-                        color: `hsl(${c1.value}, 100%, 50%)`,
+                        color: 16711680,
                         opacity: .7,
-                        specular: `hsl(${c2.value}, 100%, 50%)`,
-                        shininess: 40,
+                        specular: 16744576,
+                        shininess: 30,
                         transparent: !0,
                         side: THREE.DoubleSide,
                         shading: THREE.FlatShading,
@@ -19162,26 +19160,6 @@
                             min: 0,
                             max: 2,
                             l10O1: .02,
-                            filter: "default,app,mobile"
-                        },
-                        c1: {
-                            name: "Crystal Color 1",
-                            value: 200,
-                            skipauto: !0,
-                            type: "range",
-                            min: 0,
-                            max: 4.55,
-                            l10O1: 0.1,
-                            filter: "default,app,mobile"
-                        },
-                        c2: {
-                            name: "Crystal Color 2",
-                            value: 200,
-                            skipauto: !0,
-                            type: "range",
-                            min: 0,
-                            max: 4.55,
-                            l10O1: 0.1,
                             filter: "default,app,mobile"
                         },
                         language: {
