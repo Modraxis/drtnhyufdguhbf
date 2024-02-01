@@ -34768,13 +34768,6 @@
         // Define the input range element id
         const emotes = document.getElementById('emotes');
 
-        // Function to update emotes capacity based on the input range value
-        function updateEmotesCapacity() {
-            let emotesCapacity = emotes.value;
-            emotesCapacity = isNaN(emotesCapacity) ? 4 : Math.min(Math.max(1, emotesCapacity), 5);
-            ChatPanel.prototype[globalVal].settings.set("chat_emotes_capacity", emotesCapacity);
-        }
-
         // Save the original ChatPanel value
         let globalVal = ChatPanel.toString().match(/[0OlI1]{5}/)[0];
 
@@ -34782,7 +34775,7 @@
         ChatPanel.prototype.getEmotesCapacity = function() {
             let num = this[globalVal].settings.get("chat_emotes_capacity");
             try {
-                return (num == null || isNaN(num)) ? 4 : (Math.trunc(Math.min(Math.max(1, num), 5)) || 4);
+                return (num == null || isNaN(num)) ? 4 : (Math.trunc(Math.min(Math.max(1, num), 5)) || emotes.value);
             } catch (e) {
                 return 4;
             }
