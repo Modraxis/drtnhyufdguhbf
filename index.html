@@ -34768,17 +34768,20 @@
     // Adjust the capacity by changing this variable
     var emotes = document.getElementById("emotes");
 
-    let globalVal = ChatPanel.toString().match(/[0OlI1]{5}/)[0];
-    ChatPanel.prototype.getEmotesCapacity = function() {
-        let num = this[globalVal].settings.get("chat_emotes_capacity");
-        try {
-            return (num == null || isNaN(num)) ? (emotes ? emotes.value : 4) : (Math.trunc(Math.min(Math.max(1, num), 5)) || 4);
-        } catch (e) {
-            return (emotes ? emotes.value : 4);
-        }
-    };
+    emotes.addEventListener('input', () => {
+        let globalVal = ChatPanel.toString().match(/[0OlI1]{5}/)[0];
+        ChatPanel.prototype.getEmotesCapacity = function() {
+            let num = this[globalVal].settings.get("chat_emotes_capacity");
+            try {
+                return (num == null || isNaN(num)) ? (emotes ? emotes.value : 4) : (Math.trunc(Math.min(Math.max(1, num), 5)) || 4);
+            } catch (e) {
+                return (emotes ? emotes.value : 4);
+            }
+        };
 
-    ChatPanel.prototype.typed = Function("return " + ChatPanel.prototype.typed.toString().replace(/>=\s*4/, " >= this.getEmotesCapacity()"))();
+        ChatPanel.prototype.typed = Function("return " + ChatPanel.prototype.typed.toString().replace(/>=\s*4/, " >= this.getEmotesCapacity()"));
+    });
+
 </script>
     
 </body>
