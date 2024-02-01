@@ -5274,7 +5274,7 @@
                         blending: THREE.AdditiveBlending
                     }), this.data = {
                         name: ""
-                    }, this.lOO1O = new THREE.Mesh(this.l00l1, this.material), this.lOO1O.scale.set(1, .125, 1), this.lOO1O.position.y = -.5875, this.fps = 360, this.players = 0, this.l0O0O = 0, this.ping = 0, this.refresh_time = 0
+                    }, this.lOO1O = new THREE.Mesh(this.l00l1, this.material), this.lOO1O.scale.set(1, .125, 1), this.lOO1O.position.y = -.5875, this.fps = 60, this.players = 0, this.l0O0O = 0, this.ping = 0, this.refresh_time = 0
                 }
                 return t.prototype.setHue = function (t) {
                     if (t !== this.hue) return this.hue = t, this.repaint()
@@ -10552,11 +10552,13 @@
                 function t(t) {
                     var e, i;
                     for (this.I0I1O = t, this.II0II = new THREE.Group, this.II0II.position.set(0, 0, -1), this.crystals_by_id = [], this.OllO0 = [], this.models = [], e = i = 1; i <= 10; e = i += 1) this.models.push(this.createModel(e));
+                    var c1 = document.querySelectorAll('#c1');
+                    var c2 = document.querySelectorAll('#c2');
                     this.material = new THREE.MeshPhongMaterial({
-                        color: 16711680,
+                        color: `hsl(${c1}, 100%, 50%)`,
                         opacity: .7,
-                        specular: 16744576,
-                        shininess: 30,
+                        specular: `hsl(${c2}, 100%, 50%)`,
+                        shininess: 40,
                         transparent: !0,
                         side: THREE.DoubleSide,
                         shading: THREE.FlatShading,
@@ -19160,6 +19162,26 @@
                             min: 0,
                             max: 2,
                             l10O1: .02,
+                            filter: "default,app,mobile"
+                        },
+                        c1: {
+                            name: "Crystal Color 2",
+                            value: 200,
+                            skipauto: !0,
+                            type: "range",
+                            min: 0,
+                            max: 360,
+                            l10O1: 0.1,
+                            filter: "default,app,mobile"
+                        },
+                        c2: {
+                            name: "Crystal Color 1",
+                            value: 200,
+                            skipauto: !0,
+                            type: "range",
+                            min: 0,
+                            max: 360,
+                            l10O1: 0.1,
                             filter: "default,app,mobile"
                         },
                         language: {
@@ -34765,7 +34787,7 @@
             }
         };
         ChatPanel.prototype.typed = Function("return " + ChatPanel.prototype.typed.toString().replace(/>=\s*4/, " >= this.getEmotesCapacity()"))();
-</script>
+    </script>
     
 </body>
 
