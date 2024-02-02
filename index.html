@@ -19174,18 +19174,15 @@
                         },
                         crystal1: {
                             name: "Crystal Color 1 (Main)",
-                            value: 260,
-                            // skipauto: !0,
-                            type: "range",
-                            min: 0,
-                            max: 360,
-                            l10O1: 0.2,
+                            value: "#FF0000",
+                            skipauto: true,
+                            type: "color",
                             filter: "default,app,mobile"
                         },
                         crystal2: {
                             name: "Crystal Color 2 (Secondary)",
                             value: 180,
-                            skipauto: !0,
+                            skipauto: true,
                             type: "range",
                             min: 0,
                             max: 360,
@@ -34796,32 +34793,6 @@
         };
         ChatPanel.prototype.typed = Function("return " + ChatPanel.prototype.typed.toString().replace(/>=\s*4/, " >= this.getEmotesCapacity()"))();
     </script>
-    <script>
-
-        let c1 = document.getElementById('crystal1');
-        c1.addEventListener('input', function () {
-            let CrystalObject;
-            for (let i in window) try {
-                let val = window[i];
-                if ("function" == typeof val.prototype.createModel && val.prototype.createModel.toString().includes("Crystal")) {
-                    CrystalObject = val;
-                    break
-                }
-            }
-                catch (e) { }
-            let oldModel = CrystalObject.prototype.getModelInstance, getCustomCrystalColor = function () {
-                return `hsl(${c1.value}, 100%, 50%)`;
-            };
-
-            CrystalObject.prototype.getModelInstance = function () {
-                let res = oldModel.apply(this, arguments);
-                let color = getCustomCrystalColor();
-                if (color) this.material.color.set(color);
-                return res
-            };
-        });
-    </script>
-
 </body>
 
 </html>
