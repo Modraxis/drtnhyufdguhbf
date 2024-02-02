@@ -18670,7 +18670,7 @@
                     for (f = document.querySelectorAll(".option input[type=range]"), i = function (e) {
                         return function (i) {
                             if (i.addEventListener("input", function (s) {
-                                return x = document.querySelector("#" + i.getAttribute("id") + "_value"), x.innerText = "0" === i.value ? t("Off") : i.id === "emojis" ? i.value + " x" : i.value + " %", e.updateSettings(s, !0)
+                                return x = document.querySelector("#" + i.getAttribute("id") + "_value"), x.innerText = "0" === i.value ? t("Off") : i.id !== "emojis" ? i.value + " %" : i.value + "x", e.updateSettings(s, !0)
                             }), i.dispatchEvent(new Event("input")), "sounds" === i.id) return i.addEventListener("change", function (t) {
                                 return e.I0I1O.ll111.beep(4 + .2 * Math.random(), 1)
                             })
