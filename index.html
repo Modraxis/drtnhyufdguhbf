@@ -10083,7 +10083,7 @@
                 name: "Missiles",
                 type: "rocket",
                 model: "MISSILE_MODEL",
-                ammo: 20,
+                ammo: 2,
                 damage: 150,
                 damage_area: 30,
                 price: 250,
@@ -10093,7 +10093,7 @@
                 shield: 75,
                 mass: 100,
                 Il01O: !0,
-                rate: 10,
+                rate: .2,
                 armed_delay: 60,
                 glyph: "k"
             }), WEAPON_TYPES.add({
@@ -19162,6 +19162,30 @@
                             l10O1: .02,
                             filter: "default,app,mobile"
                         },
+                            emojis: {
+                                name: "Chat Bubbles Capacity",
+                                value: 4,
+                                skipauto: !0,
+                                type: "range",
+                                min: 1,
+                                max: 5,
+                                l10II: 1,
+                                filter: "default,app,mobile"
+                            },
+                            maincrystalcolor: {
+                                name: "Crystal Color 1 (Main)",
+                                value: "#FF0000",
+                                skipauto: true,
+                                type: "color",
+                                filter: "default,app,mobile"
+                            },
+                            secondcrystalcolor: {
+                                name: "Crystal Color 2 (Secondary)",
+                                value: "#FF8080",
+                                skipauto: true,
+                                type: "color",
+                                filter: "default,app,mobile"
+                            },
                         language: {
                             name: "Language",
                             value: !1,
