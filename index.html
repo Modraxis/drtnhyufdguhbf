@@ -18662,7 +18662,7 @@
                                     e += "</select></div>"
                                 }
                             else e += '<div class="option">' + t(c.name) + '<div class="range">\n  <input id=\'' + s + "' type=\"range\" min='" + c.min + "' max='" + c.max + "' value='" + c.value + "' step='" + c.l10O1 + "'>\n<span id='" + s + "_value'>" + c.value + "</span>\n  </div>\n</div>";
-                    for (h.innerHTML = e, I = document.querySelectorAll(".option input[type=checkbox]"), u = 0, a = I.length; u < a; u++) d = I[u], d.addEventListener("click", function (t) {
+                            for (h.innerHTML = e, I = document.querySelectorAll(".option input[type=checkbox]"), u = 0, a = I.length; u < a; u++) d = I[u], d.addEventListener("click", function (t) {
                         return function (e) {
                             return t.updateSettings(e)
                         }
@@ -18670,7 +18670,7 @@
                     for (f = document.querySelectorAll(".option input[type=range]"), i = function (e) {
                         return function (i) {
                             if (i.addEventListener("input", function (s) {
-                                return x = document.querySelector("#" + i.getAttribute("id") + "_value"), x.innerText = "0" === i.value ? t("Off") : Math.round(50 * i.value) + " %", e.updateSettings(s, !0)
+                                return x = document.querySelector("#" + i.getAttribute("id") + "_value"), x.innerText = "0" === i.value ? t("Off") : i.value + " %", e.updateSettings(s, !0)
                             }), i.dispatchEvent(new Event("input")), "sounds" === i.id) return i.addEventListener("change", function (t) {
                                 return e.I0I1O.ll111.beep(4 + .2 * Math.random(), 1)
                             })
@@ -19148,8 +19148,8 @@
                             skipauto: !0,
                             type: "range",
                             min: 0,
-                            max: 2,
-                            l10O1: .02,
+                            max: 100,
+                            l10O1: .01,
                             filter: "default,app,mobile"
                         },
                         music: {
@@ -19158,8 +19158,8 @@
                             skipauto: !0,
                             type: "range",
                             min: 0,
-                            max: 2,
-                            l10O1: .02,
+                            max: 100,
+                            l10O1: .01,
                             filter: "default,app,mobile"
                         },
                         emojis: {
