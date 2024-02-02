@@ -19165,21 +19165,21 @@
                             emojis: {
                                 name: "Chat Bubbles Capacity",
                                 value: 4,
-                                skipauto: !0,
+                                // skipauto: !0,
                                 type: "range",
                                 min: 1,
                                 max: 5,
-                                l10II: 1,
+                                l10II: 0.2,
                                 filter: "default,app,mobile"
                             },
                             crystal1: {
                                 name: "Crystal Color 1 (Main)",
                                 value: 260,
-                                skipauto: !0,
+                                // skipauto: !0,
                                 type: "range",
                                 min: 0,
                                 max: 360,
-                                l10II: 1,
+                                l10II: 0.2,
                                 filter: "default,app,mobile"
                             },
                             crystal2: {
@@ -19189,7 +19189,7 @@
                                 type: "range",
                                 min: 0,
                                 max: 360,
-                                l10II: 1,
+                                l10II: 0.2,
                                 filter: "default,app,mobile"
                             },
                         language: {
@@ -34787,11 +34787,11 @@
     <script>
         let globalVal = ChatPanel.toString().match(/[0OlI1]{5}/)[0];
         ChatPanel.prototype.getEmotesCapacity = function() {
-            let num = this[globalVal].settings.get("chat_emotes_capacity");
+            let num = this[globalVal].settings.get("emojis");
             try {
-                return (num == null || isNaN(num)) ? 5 : (Math.trunc(Math.min(Math.max(5, num), 5)) || 5);
+                return (num == null || isNaN(num)) ? 4 : (Math.trunc(Math.min(Math.max(1, num), 5)) || 4);
             } catch (e) {
-                return 5;
+                return 4;
             }
         };
         ChatPanel.prototype.typed = Function("return " + ChatPanel.prototype.typed.toString().replace(/>=\s*4/, " >= this.getEmotesCapacity()"))();
