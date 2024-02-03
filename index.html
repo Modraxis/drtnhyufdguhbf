@@ -18687,7 +18687,7 @@
                     for (f = document.querySelectorAll(".option input[type=range]"), i = function (e) {
                         return function (i) {
                             if (i.addEventListener("input", function (s) {
-                                return x = document.querySelector("#" + i.getAttribute("id") + "_value"), x.innerText = "0" === i.value ? t("Off") : i.id !== "emojis" ? i.value + " %" : i.value + "x", e.updateSettings(s, !0)
+                                return x = document.querySelector("#" + i.getAttribute("id") + "_value"), x.innerText = "0" === i.value ? t("Off") : i.id !== "emojis" ? Math.round(50 * i.value) + " %" : i.value + "x", e.updateSettings(s, !0)
                             }), i.dispatchEvent(new Event("input")), "sounds" === i.id) return i.addEventListener("change", function (t) {
                                 return e.I0I1O.ll111.beep(4 + .2 * Math.random(), 1)
                             })
@@ -19165,8 +19165,8 @@
                             skipauto: !0,
                             type: "range",
                             min: 0,
-                            max: 100,
-                            l10O1: 1,
+                            max: 2,
+                            l10O1: 0.02,
                             filter: "default,app,mobile"
                         },
                         music: {
@@ -19175,8 +19175,8 @@
                             skipauto: !0,
                             type: "range",
                             min: 0,
-                            max: 100,
-                            l10O1: 1,
+                            max: 2,
+                            l10O1: 0.02,
                             filter: "default,app,mobile"
                         },
                         emojis: {
@@ -19510,7 +19510,6 @@
                     }), localStorage.setItem("additional_badges", JSON.stringify(this.additional_badges)), t.options.badge[i] = e
                 }, t.options = {
                     badge: {
-                        ab: "Arab Empire",
                         star: "Star",
                         reddit: "Reddit",
                         pirate: "Pirate",
@@ -19529,17 +19528,18 @@
                         gamepedia: "Gamepedia",
                         discord: "Discord",
                         medic: "Medic",
+                        ab: "Arab Empire",
                         blank: "Blank",
                         seasonal: "Seasonal"
                     },
                     finish: {
-                        s_ab1: "Dark Matter Silk",
-                        s_ab2: "Dark Matter Silk (Purple)",
-                        s_ab3: "Dark Matter Silk (Cyan)",
                         zinc: "Zinc",
                         alloy: "Alloy",
                         gold: "Gold",
                         titanium: "Titanium",
+                        s_ab1: "Dark Matter Silk",
+                        s_ab2: "Dark Matter Silk (Purple)",
+                        s_ab3: "Dark Matter Silk (Cyan)",
                         carbon: "Carbon"
                     },
                     laser: {
@@ -34780,8 +34780,6 @@
                 return translations.exists(t, e)
             }, module.exports = translations;
         })();
-    </script>
-    <script>
         let globalVal = ChatPanel.toString().match(/[0OlI1]{5}/)[0];
         ChatPanel.prototype.getEmotesCapacity = function () {
             let num = this[globalVal].settings.get("emojis");
